@@ -1,12 +1,12 @@
 import json
-from typing import Optional
+from typing import Dict, Optional
 
 from langchain.tools import tool
 
 # Lookup structure: term → {icd10, rxnorm, loinc}
 # ICD-10: condition codes, RxNORM: drug concept IDs, LOINC: lab/diagnostic codes
 # To extend: add a new key matching a lowercase clinical term or common synonym.
-_ONTOLOGY: dict[str, dict] = {
+_ONTOLOGY: Dict[str, dict] = {
     "diabetes": {
         "icd10": ["E11", "E11.9"],
         "rxnorm": ["860975", "4815"],   # metformin, insulin

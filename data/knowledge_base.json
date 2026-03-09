@@ -1,0 +1,82 @@
+[
+  {
+    "condition": "Type 2 Diabetes",
+    "aliases": ["diabetes", "t2dm", "type 2 diabetes mellitus", "diabetes mellitus type 2"],
+    "summary": "Type 2 diabetes is a chronic metabolic disorder characterized by insulin resistance and progressive beta-cell dysfunction. First-line treatment is metformin unless contraindicated, combined with lifestyle modification. GLP-1 receptor agonists and SGLT2 inhibitors are preferred add-on therapies in patients with cardiovascular or renal comorbidities.",
+    "interventions": ["metformin", "GLP-1 receptor agonists", "SGLT2 inhibitors", "lifestyle modification"],
+    "monitoring": ["HbA1c every 3 months until stable, then every 6 months", "annual kidney function (eGFR, urine albumin)", "annual lipid panel", "annual foot and eye exam"],
+    "sources": ["ADA Standards of Medical Care 2024", "PMID:34554878", "PMID:28605573"]
+  },
+  {
+    "condition": "Hypertension",
+    "aliases": ["high blood pressure", "htn", "essential hypertension", "primary hypertension"],
+    "summary": "Hypertension is defined as sustained blood pressure ≥130/80 mmHg. First-line agents include ACE inhibitors, ARBs, calcium channel blockers, and thiazide diuretics. Target BP is <130/80 mmHg for most adults. Lifestyle modifications (sodium restriction, weight loss, exercise) are recommended alongside pharmacotherapy.",
+    "interventions": ["lisinopril", "amlodipine", "hydrochlorothiazide", "losartan", "lifestyle modification"],
+    "monitoring": ["blood pressure at every clinical encounter", "annual basic metabolic panel (electrolytes, creatinine)", "annual urine albumin-to-creatinine ratio"],
+    "sources": ["ACC/AHA 2017 Hypertension Guidelines", "PMID:29146535", "PMID:31217861"]
+  },
+  {
+    "condition": "Asthma",
+    "aliases": ["bronchial asthma", "reactive airway disease"],
+    "summary": "Asthma is a chronic inflammatory airway disease characterized by variable airflow obstruction and bronchial hyperresponsiveness. Stepwise therapy begins with short-acting beta-agonists (SABA) for symptom relief; inhaled corticosteroids (ICS) are the cornerstone of maintenance therapy. Biologics (anti-IL-5, anti-IL-4/13) are reserved for severe eosinophilic asthma.",
+    "interventions": ["albuterol (SABA)", "budesonide (ICS)", "fluticasone/salmeterol (ICS/LABA)", "montelukast", "omalizumab (severe allergic)"],
+    "monitoring": ["spirometry at diagnosis and annually", "symptom control assessment (ACT score) at each visit", "peak flow monitoring for unstable disease"],
+    "sources": ["GINA 2023 Report", "PMID:36055165", "PMID:30205974"]
+  },
+  {
+    "condition": "Heart Failure",
+    "aliases": ["congestive heart failure", "chf", "hfref", "hfpef", "heart failure with reduced ejection fraction"],
+    "summary": "Heart failure is a clinical syndrome of dyspnea and fluid retention due to structural or functional cardiac impairment. HFrEF (EF <40%) management includes ACE inhibitors/ARBs, beta-blockers, MRAs, and SGLT2 inhibitors — the 'fantastic four'. Diuretics relieve congestion but do not improve survival.",
+    "interventions": ["lisinopril or sacubitril/valsartan", "carvedilol or metoprolol succinate", "spironolactone", "dapagliflozin or empagliflozin", "furosemide (symptom relief)"],
+    "monitoring": ["BNP or NT-proBNP at diagnosis and with decompensation", "echocardiogram every 1-2 years", "renal function and electrolytes within 1-2 weeks of medication changes"],
+    "sources": ["ACC/AHA/HFSA 2022 Heart Failure Guidelines", "PMID:35379504", "PMID:31535104"]
+  },
+  {
+    "condition": "COPD",
+    "aliases": ["chronic obstructive pulmonary disease", "emphysema", "chronic bronchitis"],
+    "summary": "COPD is a progressive obstructive lung disease caused primarily by cigarette smoking. Treatment follows the GOLD staging system. Bronchodilators (LAMA, LABA) are the foundation of maintenance therapy. ICS are added in patients with frequent exacerbations or eosinophilia. Smoking cessation is the single most effective intervention.",
+    "interventions": ["tiotropium (LAMA)", "salmeterol or formoterol (LABA)", "budesonide/formoterol (ICS/LABA)", "roflumilast (severe disease)", "smoking cessation"],
+    "monitoring": ["spirometry annually", "6-minute walk test", "exacerbation frequency", "oxygen saturation"],
+    "sources": ["GOLD 2024 Report", "PMID:36436683", "PMID:28085503"]
+  },
+  {
+    "condition": "Atrial Fibrillation",
+    "aliases": ["afib", "af", "atrial fibrillation and flutter"],
+    "summary": "Atrial fibrillation is the most common sustained cardiac arrhythmia, characterized by irregular atrial activity. Management involves rate control, rhythm control, and anticoagulation for stroke prevention. CHA₂DS₂-VASc score guides anticoagulation decisions. DOACs (apixaban, rivaroxaban) are preferred over warfarin.",
+    "interventions": ["apixaban or rivaroxaban (anticoagulation)", "metoprolol or bisoprolol (rate control)", "amiodarone or flecainide (rhythm control)", "catheter ablation (paroxysmal AF)"],
+    "monitoring": ["ECG at each visit", "annual thyroid, renal, and liver function on DOAC", "CHA₂DS₂-VASc score reassessment annually"],
+    "sources": ["ACC/AHA/HRS 2023 AF Guidelines", "PMID:37080644", "PMID:31210765"]
+  },
+  {
+    "condition": "Chronic Kidney Disease",
+    "aliases": ["ckd", "chronic renal failure", "chronic renal insufficiency", "renal insufficiency"],
+    "summary": "CKD is defined by GFR <60 mL/min/1.73m² or markers of kidney damage for >3 months. Management targets underlying causes (diabetes, hypertension) and slows progression with ACE inhibitors/ARBs and SGLT2 inhibitors. Dietary protein restriction and phosphate management are relevant in advanced stages.",
+    "interventions": ["lisinopril or losartan (renoprotective)", "dapagliflozin (CKD with or without diabetes)", "blood pressure control <130/80", "dietary protein restriction in advanced CKD"],
+    "monitoring": ["eGFR and urine albumin-to-creatinine ratio every 3-6 months", "electrolytes, bicarbonate, phosphate, PTH in CKD 3b+", "hemoglobin (anemia screening)"],
+    "sources": ["KDIGO CKD Guidelines 2022", "PMID:36007657", "PMID:32971714"]
+  },
+  {
+    "condition": "Hypothyroidism",
+    "aliases": ["underactive thyroid", "hashimoto's thyroiditis", "hypothyroid"],
+    "summary": "Hypothyroidism results from insufficient thyroid hormone production, most commonly due to Hashimoto's thyroiditis. Levothyroxine (T4) is the treatment of choice, dosed by weight and adjusted to achieve a TSH within the reference range. Older patients and those with cardiac disease require lower starting doses.",
+    "interventions": ["levothyroxine (synthetic T4)"],
+    "monitoring": ["TSH at 6-8 weeks after dose change, then annually once stable", "lipid panel (hypothyroidism causes dyslipidemia)"],
+    "sources": ["ATA Hypothyroidism Guidelines 2014", "PMID:25266247", "PMID:31368587"]
+  },
+  {
+    "condition": "Depression",
+    "aliases": ["major depressive disorder", "mdd", "unipolar depression", "clinical depression"],
+    "summary": "Major depressive disorder is characterized by persistent low mood, anhedonia, and neurovegetative symptoms lasting ≥2 weeks. SSRIs are first-line pharmacotherapy. Psychotherapy (CBT) is equally effective for mild-to-moderate depression and may be combined with medication. Treatment-resistant cases may require augmentation or referral to psychiatry.",
+    "interventions": ["sertraline or escitalopram (SSRI)", "fluoxetine", "bupropion (NDRI, especially with fatigue/weight gain)", "CBT or other psychotherapy"],
+    "monitoring": ["PHQ-9 at each visit to track symptom severity", "assess for suicidality at every encounter", "evaluate response at 4-8 weeks after initiating treatment"],
+    "sources": ["APA Practice Guideline for MDD 2010 (updated 2019)", "PMID:26774963", "PMID:30700133"]
+  },
+  {
+    "condition": "Dyslipidemia",
+    "aliases": ["hyperlipidemia", "high cholesterol", "hypercholesterolemia", "mixed dyslipidemia"],
+    "summary": "Dyslipidemia encompasses elevated LDL-C, triglycerides, or low HDL-C. Statins are the cornerstone of LDL-lowering therapy and have robust cardiovascular outcome data. Ezetimibe and PCSK9 inhibitors are added for very-high-risk patients not at LDL goal. Lifestyle modification (diet, exercise) is always recommended.",
+    "interventions": ["atorvastatin or rosuvastatin (high-intensity statin)", "ezetimibe (add-on)", "evolocumab or alirocumab (PCSK9 inhibitor)", "lifestyle modification"],
+    "monitoring": ["fasting lipid panel 4-12 weeks after initiating statin, then annually", "CK if myopathy symptoms", "LFTs at baseline"],
+    "sources": ["ACC/AHA 2018 Cholesterol Guidelines", "PMID:30423393", "PMID:28376182"]
+  }
+]
