@@ -2,6 +2,7 @@
 
 > A clinical Q&A agent that answers questions across conditions, interventions, and evidence — built for researchers, clinicians, and health-curious developers.
 
+![Axiom](public/axiom-md.jpg)
 ---
 
 ## What it does
