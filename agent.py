@@ -1,6 +1,7 @@
 import json
 import os
 
+import openai
 from dotenv import load_dotenv
 from langchain.agents import AgentType, initialize_agent
 from langchain.schema import SystemMessage
@@ -77,6 +78,13 @@ def run_agent():
         try:
             raw = agent.run(user_input)
             print(f"\nAxiom:\n{_parse_response(raw)}\n")
+        except openai.RateLimitError:
+            print("\nAxiom: OpenAI quota exceeded — you may be out of credits. "
+                  "Check your usage at https://platform.openai.com/usage\n")
+            break
+        except openai.AuthenticationError:
+            print("\nAxiom: Invalid OpenAI API key. Check OPENAI_API_KEY in your .env file.\n")
+            break
         except Exception as e:
             print(f"\nAxiom: Error — {e}\n")
 
