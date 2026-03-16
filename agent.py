@@ -76,7 +76,7 @@ def run_agent():
             print("Axiom: Session closed.")
             break
         try:
-            raw = agent.run(user_input)
+            raw = agent.invoke({"input": user_input})["output"]
             print(f"\nAxiom:\n{_parse_response(raw)}\n")
         except openai.RateLimitError:
             print("\nAxiom: OpenAI quota exceeded — you may be out of credits. "
