@@ -1,8 +1,12 @@
 import json
 import os
+import warnings
 
 import openai
 from dotenv import load_dotenv
+
+warnings.filterwarnings("ignore", category=DeprecationWarning, module="langchain")
+warnings.filterwarnings("ignore", message=".*LibreSSL.*")
 from langchain.agents import AgentType, initialize_agent
 from langchain.schema import SystemMessage
 from langchain_openai import ChatOpenAI
