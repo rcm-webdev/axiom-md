@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 warnings.filterwarnings("ignore", category=DeprecationWarning, module="langchain")
 warnings.filterwarnings("ignore", message=".*LibreSSL.*")
 from langchain.agents import AgentType, initialize_agent
+from langchain.callbacks.base import BaseCallbackHandler
 from langchain.schema import SystemMessage
 from langchain_openai import ChatOpenAI
 
@@ -52,6 +53,19 @@ agent = initialize_agent(
 )
 
 
+class _ProgressCallback(BaseCallbackHandler):
+    _LABELS = {
+        "query_knowledge_base": "Querying clinical knowledge base...",
+        "search_pubmed": "Searching PubMed for evidence...",
+        "map_ontology": "Mapping ontology codes...",
+    }
+
+    def on_tool_start(self, serialized, input_str, **kwargs):
+        name = serialized.get("name", "")
+        label = self._LABELS.get(name, f"Running {name}...")
+        print(f"  {label}", flush=True)
+
+
 def _parse_response(raw: str) -> str:
     try:
         # Strip markdown code fences if present
@@ -80,7 +94,11 @@ def run_agent():
             print("Axiom: Session closed.")
             break
         try:
-            raw = agent.invoke({"input": user_input})["output"]
+            print("\nAxiom: Analyzing your question...", flush=True)
+            raw = agent.invoke(
+                {"input": user_input},
+                config={"callbacks": [_ProgressCallback()]},
+            )["output"]
             print(f"\nAxiom:\n{_parse_response(raw)}\n")
         except openai.RateLimitError:
             print("\nAxiom: OpenAI quota exceeded — you may be out of credits. "
