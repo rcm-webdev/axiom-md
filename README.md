@@ -28,22 +28,59 @@ Ask it about a drug-condition interaction, a diagnostic criterion, a common pati
 ```
 $ python agent.py
 
-axiom-md > What are the first-line treatments for type 2 diabetes in adults?
+axiom-md > What are the treatment options for Fuchs' Corneal Dystrophy,
+           and at what stage is surgery typically indicated?
 
 Agent: Querying clinical knowledge base...
+  → Found entry: Fuchs' Endothelial Corneal Dystrophy
 
-Condition: Type 2 Diabetes Mellitus
-ICD-10: E11
-RxNORM (first-line agents): 860975 (metformin), 4815 (glipizide)
+Agent: Searching PubMed for supporting evidence...
+  → Query: "Fuchs endothelial corneal dystrophy treatment DMEK DSAEK"
+  → Retrieved 3 abstracts (PMIDs: 33248268, 25892019, 32511983)
 
-Summary: Current guidelines recommend metformin as the preferred initial
-pharmacologic agent for most adults with type 2 diabetes, absent
-contraindications. GLP-1 receptor agonists or SGLT-2 inhibitors are
-recommended when cardiovascular or renal comorbidities are present.
+Agent: Mapping clinical ontology codes...
+  → ICD-10:  H18.59 (Other hereditary corneal dystrophies)
+  → RxNORM:  8262   (sodium chloride 5% ophthalmic solution)
+  → LOINC:   71486-3 (corneal endothelial cell density, specular microscopy)
+
+────────────────────────────────────────────────────────────────────────
+
+Condition:  Fuchs' Endothelial Corneal Dystrophy
+ICD-10:     H18.59
+RxNORM:     8262 (sodium chloride 5% ophthalmic)
+LOINC:      71486-3 (specular microscopy — endothelial cell density)
+
+Summary:
+  Fuchs' Endothelial Corneal Dystrophy is a bilateral, progressive
+  degeneration of the corneal endothelium characterized by guttae
+  formation and eventual endothelial cell failure. Management is
+  stratified by disease severity.
+
+  Early-stage disease (guttae without edema): Managed conservatively
+  with hypertonic saline drops (NaCl 5%) to reduce epithelial edema.
+  Patients typically report morning blur that clears through the day
+  as the epithelium dehydrates — this pattern is diagnostically useful.
+
+  Surgical indication: Endothelial keratoplasty is indicated when
+  corneal edema produces visually significant impairment unresponsive
+  to medical management. DMEK (Descemet Membrane Endothelial
+  Keratoplasty) is the current standard of care, demonstrating faster
+  visual recovery and lower rejection rates vs. DSAEK in controlled
+  trials. DSAEK remains appropriate where DMEK tissue or surgical
+  expertise is unavailable. Descemet stripping only (DSO/DWEK), without
+  donor graft, is an emerging option for select cases with sufficient
+  peripheral endothelial reserve.
 
 Sources:
-- ADA Standards of Care in Diabetes (2024)
-- PubMed: PMID 38078584
+  - Ong Tone et al. (2021). Fuchs endothelial corneal dystrophy:
+    The vicious cycle of Fuchs pathophysiology.
+    Progress in Retinal and Eye Research. PMID: 33248268
+  - Price et al. (2015). Descemet membrane endothelial keratoplasty:
+    Prospective multicenter trial of visually significant guttae.
+    Ophthalmology. PMID: 25892019
+  - AAO Preferred Practice Pattern: Corneal Ectasia (2023)
+
+────────────────────────────────────────────────────────────────────────
 
 axiom-md >
 ```
